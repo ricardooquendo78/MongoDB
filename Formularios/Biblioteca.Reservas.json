@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "67bf5ff81ff5c65f3325b38f"
+  },
+  "Libro": "el principito",
+  "ejemplar": "0001",
+  "Fecha fin de recogida": "48h after",
+  "Fecha y hora reserva": "26/02/25"
+}]
