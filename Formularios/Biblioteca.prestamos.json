@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "67bf60dc1ff5c65f3325b390"
+  },
+  "Fecha inicio": "26/02/25",
+  "Fecha fin": "26/03/25",
+  "Libro": "el principito",
+  "ejemplar": "0001"
+}]
