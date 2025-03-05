@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="carpetas/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sigmar&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="opciones">
+        <ul>
+            <button id="btnUsuarios">Usuarios</button>
+            <button id="btnLibros">Libros</button>
+            <button id="btnEjemplares">Ejemplares</button>
+            <button id="btnReservas">Reservas</button>
+            <button id="btnPrestamos">Prestamos</button>
+        </ul>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <form id="formularioUsuarios" class="formularios">
+        <h2>Agregar Usuario</h2><br>
+        <label for="nombre">Nombre</label><br>
+        <input type="text" id="nombre" placeholder="Nombre" required><br>
+        <label for="apellido">Apellido</label><br>
+        <input type="text" id="apellido" placeholder="Apellido"><br>
+        <label for="edad">Edad</label><br>
+        <input type="number" id="edad" placeholder="Edad"><br>
+        <label for="correo">Correo</label><br>
+        <input type="email" id="correo" placeholder="Correo" required><br>
+        <label for="cedula">Cedula</label><br>
+        <input type="number" id="cedula" placeholder="# de Cedula" required><br>
+        <button type="submit" id="btnActualizarFormulario">Actualizar</button>
+        <button type="button" id="btnCancelar">Cancelar</button>
+    </form>
+    <form id="formularioLibros" class="formularios">
+        <h2>Agregar Libro</h2><br>
+        <label for="nombreL">Nombre</label><br>
+        <input type="text" id="nombre" placeholder="Nombre" required><br>
+        <label for="Año">Año</label><br>
+        <input type="number" min="1400" max="2025" id="año" placeholder="Año"><br>
+        <label for="Autor">Autor</label><br>
+        <input type="text" id="autor" placeholder="Autor"><br>
+        <label for="Editorial">Editorial</label><br>
+        <input type="text" id="editorial" placeholder="Editorial"><br>
+        <button type="submit" id="btnActualizarFormulario">Actualizar</button>
+        <button type="button" id="btnCancelarL">Cancelar</button>
+    </form>
+    <form id="formularioEjemplares" class="formularios">
+        <h2>Agregar Ejemplar</h2><br>
+        <label for="nombreL2">Libro</label><br>
+        <input type="text" id="ejemplar" placeholder="Nombre del libro"><br>
+        <label for="ejemplar">Ejemplar</label><br>
+        <input type="text" id="idEjemplar" placeholder="ID Ejemplar"><br>
+        <button type="submit" id="btnActualizarFormulario">Actualizar</button>
+        <button type="button" id="btnCancelarE">Cancelar</button>
+    </form>
+    <form id="formularioReservas" class="formularios">
+        <h2>Hacer una Reserva</h2><br>
+        <label for="nombreL3">Libro</label><br>
+        <input type="text" id="libroReserva" placeholder="Libro a reservar"><br>
+        <label for="ejemplarReserva">Ejemplar</label><br>
+        <input type="text" id="idEjemplarReserva" placeholder="ID Ejemplar"><br>
+        <label for="fechaInicio">Fecha inicio</label><br>
+        <input type="date" id="fechaInicio" placeholder="Fecha de hoy"><br>
+        <label for="fechaFin">Fecha fin</label><br>
+        <input type="date" id="fechaFin" placeholder="Cuando lo va a devolver"><br>
+        <button type="submit" id="btnActualizarFormulario">Actualizar</button>
+        <button type="button" id="btnCancelarR">Cancelar</button>
+    </form>
+    <form id="formularioPrestamos" class="formularios">
+        <h2>Hacer un prestamo</h2><br>
+        <label for="fechaInicioP">Fecha inicio</label><br>
+        <input type="date" id="fechaInicioP" placeholder="Fecha de hoy"><br>
+        <label for="fechaFinP">Fecha fin</label><br>
+        <input type="date" id="fechaFinP" placeholder="Fecha en la que va a entragar"><br>
+        <label for="libroP">Libro</label><br>
+        <input type="text" id="libroP" placeholder="Libro que va prestar"><br>
+        <label for="idEjemplarP">ID Ejemplar</label><br>
+        <input type="text" id="idEjemplarP" placeholder="ID Ejemplar"><br>
+        <button type="submit" id="btnActualizarFormulario">Actualizar</button>
+        <button type="button" id="btnCancelarP">Cancelar</button>
+    </form>
+
+
+    <script src="carpetas/js/script.js"></script>
+</body>
+</html>
