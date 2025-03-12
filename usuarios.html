@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="carpetas/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sigmar&display=swap" rel="stylesheet">
+    
+</head>
+
+
+<body>
+
+    <button id="btnUsuarios" >Agregar</button>
+    <button id="btnEditar">Editar</button>
+    <button id="btnEliminar">Eliminar</button>
+
+    <div class="overlay" id="overlay"></div>
+    <form id="formularioUsuarios" class="formularios">
+        <h2>Agregar Usuario</h2><br>
+        <label for="nombre">Nombre</label><br>
+        <input type="text" id="nombre1" placeholder="Nombre" required><br>
+        <label for="apellido">Apellido</label><br>
+        <input type="text" id="apellido1" placeholder="Apellido"><br>
+        <label for="edad">Edad</label><br>
+        <input type="number" id="edad1" placeholder="Edad"><br>
+        <label for="correo">Correo</label><br>
+        <input type="email" id="correo1" placeholder="Correo" required><br>
+        <label for="cedula">Cedula</label><br>
+        <input type="number" id="cedula1" placeholder="# de Cedula" required><br>
+        <button type="submit" id="btnActualizarFormulario">Agregar</button>
+        <button type="button" id="btnCancelar">Cancelar</button>
+    </form>
+    
+    <div class="tablas">
+        <table border="1" id="tablas">
+            <tbody>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Correo</th>
+                    <th>Cedula</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./carpetas/js/script.js"></script>
+</body>
+</html>

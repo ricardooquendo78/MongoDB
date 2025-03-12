@@ -23,6 +23,52 @@ function abrirFormulario (){
     });
 }
 
+document.getElementById('formularioUsuarios').addEventListener('submit',function(event){
+
+    event.preventDefault();
+
+    const nombre1 = document.getElementById('nombre1').value;
+    const apellido1 = document.getElementById('apellido1').value;
+    const edad1 = document.getElementById('edad1').value;
+    const correo1 = document.getElementById('correo1').value;
+    const cedula1 = document.getElementById('cedula1').value;
+
+    if(nombre1.trim() === '' || apellido1.trim() === '' || edad1.trim() === '' || correo1.trim() === '' || cedula1.trim() === '' ){
+        alert('Todos los campos son obligatorios bb.');
+        return;
+    }
+
+    const tabla = document.getElementById('tablas').getElementsByTagName('tbody')[0];
+
+    const nuevaFila = tabla.insertRow();
+    const celdaNombre = nuevaFila.insertCell(0);
+    const celdaApellido = nuevaFila.insertCell(1);
+    const celdaEdad = nuevaFila.insertCell(2);
+    const celdaCorreo = nuevaFila.insertCell(3);
+    const celdaCedula = nuevaFila.insertCell(4);
+
+    celdaNombre.textContent = nombre1;
+    celdaApellido.textContent = apellido1;
+    celdaEdad.textContent = edad1;
+    celdaCorreo.textContent = correo1;
+    celdaCedula.textContent = cedula1;
+
+    const btnEliminar = document.createElement('button');
+    btnEliminar.textContent = 'X';
+    btnEliminar.style.padding = '15px';
+    btnEliminar.style.paddingTop = '3px';
+    btnEliminar.style.paddingBottom = '3px';
+    btnEliminar.style.marginBottom = '4px';
+    document.body.appendChild(btnEliminar);
+    btnEliminar.onclick = function(){
+        tabla.removeChild(nuevaFila);
+    };
+    celdaActualizar.appendChild(btnEliminar);
+
+    // document.getElementById('formularioUsuarios').reset();
+});
+
+
 // Libros
 document.getElementById('btnLibros').addEventListener('click', abrirFormularioLibros);
 
